@@ -1,0 +1,20 @@
+package ICBM_PAYLOAD;
+
+message Log {
+    required string server = 1;
+    required string time = 2;
+    enum Level {
+        DEBUG = 10;
+        INFO = 20;
+        WARNING = 30;
+        ERROR = 40;
+        CRITICAL = 50;
+    }
+    required Level level = 3;
+    required string context = 4;
+    required string function = 5;
+    required int32 line = 6;
+    required string module = 7;
+    required string message = 8;
+    optional string exc_info = 9;
+}
